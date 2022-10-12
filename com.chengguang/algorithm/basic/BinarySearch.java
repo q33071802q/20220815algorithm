@@ -10,31 +10,36 @@ import java.util.Arrays;
  * 二分查找
  */
 public class BinarySearch {
-
+    /**
+     * 在一个整数数组中找到一个数
+     *
+     * @param key
+     * @param a
+     * @return
+     */
     public static int rank(int key, int[] a) {
-        //数组必须是有序的
-        int lo = 0;
-        int hi = a.length - 1;
-        while (lo <= hi) {
-            int mid = lo + (hi - lo) / 2;
-            if (key < a[mid]) hi = mid - 1;
-            else if (key > a[mid]) lo = mid + 1;
-            else return mid;
+        int low = 0;
+        int high = a.length - 1;
+
+        int mid = 0;
+        while (low <= high) {
+            mid = (low + high) / 2;
+            int guessKey = a[mid];
+            if (guessKey == key) {
+                return mid;
+            } else if (guessKey > key) {
+                high = mid - 1;
+            } else if (guessKey < key) {
+                low = mid + 1;
+            }
         }
-        return -1;
+        return mid;
     }
 
     public static void main(String[] args) {
-        int[] whitelist = new In("sort.txt").readAllInts();
+        int[] whitelist = new int[]{2,4,3,1,0};
         Arrays.sort(whitelist);
-        while (!StdIn.isEmpty()) {
-            //读取键值，如果不存在于白名单直接打印
-            int key = StdIn.readInt();
-            if (rank(key, whitelist) < 0) {
-                StdOut.println(key);
-            }
-        }
-        System.out.println(Arrays.toString(whitelist));
+        System.out.println("在数组中的index位置："+rank(3, whitelist));
     }
 
 }
