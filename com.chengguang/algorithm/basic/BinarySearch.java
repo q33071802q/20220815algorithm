@@ -7,7 +7,7 @@ import algorithm.sort.StdOut;
 import java.util.Arrays;
 
 /**
- * 二分查找
+ * 二分查找 算法图解这本书 可以 我终于入门了 睡觉
  */
 public class BinarySearch {
     /**
@@ -33,13 +33,13 @@ public class BinarySearch {
                 low = mid + 1;
             }
         }
-        return mid;
+        return -1;
     }
 
     public static void main(String[] args) {
-        int[] whitelist = new int[]{2,4,3,1,0};
+        int[] whitelist = new int[]{2, 4, 3, 1, 0};
         Arrays.sort(whitelist);
-        System.out.println("在数组中的index位置："+rank(3, whitelist));
+        System.out.println("在数组中的index位置：" + rank(7, whitelist));
     }
 
 }
