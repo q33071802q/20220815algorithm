@@ -5,6 +5,8 @@ import algorithm.sort.StdIn;
 import algorithm.sort.StdOut;
 
 import java.util.Arrays;
+import java.util.function.Consumer;
+import java.util.stream.Stream;
 
 /**
  * 二分查找 算法图解这本书 可以 我终于入门了 睡觉
@@ -39,7 +41,45 @@ public class BinarySearch {
     public static void main(String[] args) {
         int[] whitelist = new int[]{2, 4, 3, 1, 0};
         Arrays.sort(whitelist);
-        System.out.println("在数组中的index位置：" + rank(7, whitelist));
+        System.out.println("find the number index is " + rank(7, whitelist));
     }
+
+    public static class BasicSort {
+        public static int findSmallest(int[] arr) {
+            int smallest = arr[0];
+            int smallestIndex = 0;
+            for (int i = 0; i < arr.length; i++) {
+                if (arr[i] < smallest) {
+                    smallest = arr[i];
+                    smallestIndex = i;
+                }
+            }
+            return smallestIndex;
+        }
+
+        /**
+         * 选择排序的精髓不就在于每次去剩下的数组拿一个最小的么
+         *
+         * @param arr
+         * @return
+         */
+        public static int[] selectionSort(int[] arr) {
+            for (int i = 0; i < arr.length; i++) {
+                for (int j = i + 1; j < arr.length; j++) {
+                    if (arr[j] < arr[i]) {
+                        int temp = arr[j];
+                        arr[j] = arr[i];
+                        arr[i] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+
+        public static void main(String[] args) {
+            System.out.println(Arrays.toString(new BasicSort().selectionSort(new int[]{1, 5, 26, 7, 4, 8})));
+        }
+    }
+
 
 }
