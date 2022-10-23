@@ -3,9 +3,7 @@ package algorithm.basic;
 import algorithm.sort.In;
 
 import java.sql.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * 二分查找 算法图解这本书 可以 我终于入门了 睡觉
@@ -70,7 +68,6 @@ public class BinarySearch {
     }
 
     public static class QuickSort {
-
         public static List<Integer> quickSort(List<Integer> items) {
             if (items.size() > 1) {
                 List<Integer> smaller = new ArrayList<>();
@@ -81,24 +78,20 @@ public class BinarySearch {
                 for (Integer i : items) {
                     if (i < chosenItem) {
                         smaller.add(i);
-                    }else if (i>chosenItem){
+                    } else if (i > chosenItem) {
                         larger.add(i);
-                    }else {
+                    } else {
                         same.add(i);
                     }
                 }
 
                 quickSort(smaller);
                 quickSort(larger);
-                System.out.println(items);
                 //只保留最后一个排好序的结果集
                 items.clear();
                 items.addAll(smaller);
                 items.addAll(same);
                 items.addAll(larger);
-                System.out.println("小的："+smaller);
-                System.out.println("基准："+same);
-                System.out.println("大的"+larger);
             }
             return items;
         }
@@ -115,5 +108,37 @@ public class BinarySearch {
         }
     }
 
+    public static class MapSort {
+        public static void main(String[] args) {
+            HashMap<String, Integer> map = new HashMap<>();
+            map.put("1", 222);
+//            long l = System.nanoTime();
+            boolean b = map.containsKey("1");
+//            long l2 = System.nanoTime();
+//            System.out.println(l2-l);
+            Integer b2 = map.get("1");
+            System.out.println(b2);
+//            System.out.println(System.nanoTime()-l2);
+        }
+    }
 
+    /**
+     * 广度优先算法  看算法图解这本书用java完全写不出来 了解下吧算是
+     */
+    public static class BreadthFirst {
+        public static void search(String name) {
+
+        }
+
+        static class Graph{
+
+        }
+    }
+
+    /**
+     * 最短路径算法
+     */
+    public static class shortPath{
+
+    }
 }
