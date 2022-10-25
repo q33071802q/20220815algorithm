@@ -7,7 +7,6 @@ public abstract class GenericWithCreate<T> {
     }
     abstract T create();
 }
-
 class X{}
 
 class Creator extends GenericWithCreate<X>{
