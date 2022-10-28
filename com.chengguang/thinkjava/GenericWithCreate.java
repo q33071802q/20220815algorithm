@@ -1,4 +1,4 @@
-package design.template.thinkjava;
+package thinkjava;
 
 public abstract class GenericWithCreate<T> {
     final T element;
