@@ -3,7 +3,6 @@ package algorithm.sort;
 import java.util.Arrays;
 import java.util.Random;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 class PrintTest {
     public static void main(String[] args) {

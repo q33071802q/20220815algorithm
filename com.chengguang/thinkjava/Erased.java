@@ -1,6 +1,5 @@
 package thinkjava;
 
-import com.sun.glass.ui.Size;
 
 /**
  * 泛型类型擦除
