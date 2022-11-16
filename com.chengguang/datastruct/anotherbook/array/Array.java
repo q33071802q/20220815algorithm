@@ -66,7 +66,6 @@ public class Array {
         if (index < 0 || index >= count) {
             return false;
         }
-
         for (int i = index;i<count;i++){
             data[i] = data[i+1];
         }

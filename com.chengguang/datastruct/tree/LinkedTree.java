@@ -1,4 +1,4 @@
-package algorithm.data;
+package datastruct.tree;
 
 import java.util.Queue;
 import java.util.concurrent.ArrayBlockingQueue;

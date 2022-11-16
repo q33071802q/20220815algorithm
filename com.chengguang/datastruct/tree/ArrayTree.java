@@ -1,4 +1,4 @@
-package algorithm.data;
+package datastruct.tree;
 
 /**
  * 1.满二叉树数组实现

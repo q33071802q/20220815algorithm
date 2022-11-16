@@ -1,14 +1,11 @@
 package algorithm.basic;
 
-import algorithm.sort.In;
-
-import java.sql.Array;
 import java.util.*;
 
 /**
  * 二分查找 算法图解这本书 可以 我终于入门了 睡觉
  */
-public class BinarySearch {
+public class Diagram {
     /**
      * 在一个整数数组中找到一个数
      *
