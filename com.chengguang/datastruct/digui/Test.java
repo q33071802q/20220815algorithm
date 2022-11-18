@@ -3,6 +3,21 @@ package datastruct.digui;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 试图弄清楚整个递归过程
+ * 是一个思维误区
+ *
+ * 遇到递归 抽象成一个递推公式 不用想一层层的调用关系 不要试图用人脑分解递归的每个步骤
+ *
+ * 递归都可以改成迭代循环
+ * 不过没有意义 复杂度还是没有改变
+ *
+ * 递归调试
+ *
+ * 打日志 结合条件断点调试
+ *
+ * 稳定排序
+ */
 public class Test {
 
     /**
