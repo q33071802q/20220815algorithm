@@ -75,7 +75,5 @@ public class InsertionSort {
         int[] origin = {4, 5, 6, 1, 2, 3};
         new InsertionSort().insertionSort3(origin, 0, 6);
         System.out.println(Arrays.toString(origin));
-        int[] ints = {263970, 144883, 136525, 112670, 60372, 46187, 43355, 39882, 32750, 22235, 21439, 16485, 8655, 6123, 5884, 5782, 5424, 3968, 3657, 3421, 2473, 893, 1};
-        System.out.println(Arrays.stream(ints).summaryStatistics().getSum());
     }
 }
